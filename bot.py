@@ -10,9 +10,9 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("TOKEN")
+api_id = int(os.environ.get("6473933"))
+api_hash = os.environ.get("999a64e43ef2d4dc98af4ef69ccd7ade")
+bot_token = os.environ.get("5054278764:AAEY4CvjrkzSOhaeS-_AdLrPHAoGCDcFSUw")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 anlik_calisan = []
@@ -27,20 +27,20 @@ async def cancel(event):
 async def start(event):
   await event.reply("**LoungeTagger Bot**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/help**'i tıklayın.",
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/loungetaggerbot?startgroup=a'),
-                      Button.url('📣 Support', 'https://t.me/loungesupport'),
-                      Button.url('🚀 Sahibim', 'https://t.me/bodrumlubebekk')]
+                      [Button.url('🌟 Beni Bir Gruba Ekle', 'http://t.me/WollfTaggerBot?startgroup=a'),
+                      Button.url('📣 Support', 'https://t.me/wollfsupport'),
+                      Button.url('🚀 Sahibim', 'https://t.me/Rahatbirakinaq')]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Loungetagger bot'un Yardım Menüsü**\n\nKomut: /all \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. \n`Örnek: /all Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek"
+  helptext = "**Wollf tagger bot'un Yardım Menüsü**\n\nKomut: /all \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. \n`Örnek: /all Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/loungetaggerbot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/loungesupport'),
-                      Button.url('🚀 Sahibim', 'https://t.me/bodrumlubebekk')]
+                      [Button.url('🌟 Beni Bir Gruba Ekle', 'http://t.me/WollfTaggerBot?startgroup=a'),
+                       Button.url('📣 Support', 'https://t.me/wollfsupport'),
+                      Button.url('🚀 Sahibim', 'https://t.me/Rahatbirakinaq')]
                     ),
                     link_preview=False
                    )
@@ -106,5 +106,5 @@ async def mentionall(event):
         usrtxt = ""
 
 
-print(">> Bot çalıyor merak etme 🚀 @loungesupport bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 🚀 @wollfsupport bilgi alabilirsin <<")
 client.run_until_disconnected()
